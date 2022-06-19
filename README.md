@@ -30,11 +30,11 @@ poetry run uvicorn app.main:app --reload
 
 These are some high-level milestiones (not necessarily in order of priority), for the project:
 
-- [ ] Write tests for the code
+- [x] Write tests for the code
 - [x] Build endpoint to transform realtime location to GeoJSON
 - [ ] Build endpoints to return the Metrobus lines in GeoJSON
 - [ ] Dockerize the app
 - [ ] Develop authentication for the API
-- [ ] Deploy app in [aws apprunner](https://aws.amazon.com/apprunner/)
+- [x] Deploy app in [aws apprunner](https://aws.amazon.com/apprunner/)
 - [ ] Github Actions CI/CD pipeline
 - [ ] Package app into python package and publish to aws codeArtifact
