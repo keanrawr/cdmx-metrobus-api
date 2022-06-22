@@ -36,7 +36,7 @@ These are some high-level milestiones (not necessarily in order of priority), fo
 
 - [x] Write tests for the code
 - [x] Build endpoint to transform realtime location to GeoJSON
-- [ ] Build endpoints to return the Metrobus lines in GeoJSON
+- [x] Build endpoints to return the Metrobus lines and stops in GeoJSON
 - [x] Dockerize the app
 - [ ] Develop authentication for the API
 - [x] Deploy app in [aws apprunner](https://aws.amazon.com/apprunner/)
