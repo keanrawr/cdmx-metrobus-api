@@ -26,6 +26,10 @@ poetry run uvicorn app.main:app --reload
 
 > **NOTE:** There are two variables needed for configuration, `MB_USERNAME` and `MB_PASSWORD`, these can be set as environment variables or in a `.env` file
 
+## App Infrastructure
+
+![App diagram](./.github/img/diagram.png)
+
 ## Future dev ideas
 
 These are some high-level milestiones (not necessarily in order of priority), for the project:
