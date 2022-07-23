@@ -11,11 +11,6 @@ app.include_router(infra.router)
 app.include_router(realtime.router)
 
 
-@app.get('/', tags=['Root'])
-def root():
-    return 'ok'
-
-
 @app.get('/version', tags=['Root'])
 def api_version():
     return settings.version

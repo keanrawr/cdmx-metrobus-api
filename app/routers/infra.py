@@ -18,11 +18,11 @@ def read_json(file_name:str):
     return data
 
 
-@router.get('/lines', response_model=MetrobusLines)
+@router.get('/lines', response_model=MetrobusLines, response_model_exclude_none=True)
 def mb_lines():
     return read_json('lines-geojson.json')
 
 
-@router.get('/stops', response_model=MetrobusStops)
+@router.get('/stops', response_model=MetrobusStops, response_model_exclude_none=True)
 def mb_stops():
     return read_json('stops-geojson.json')

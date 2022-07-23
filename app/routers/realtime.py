@@ -8,6 +8,6 @@ router = APIRouter(
 )
 
 
-@router.get('/current-location', response_model=TransportLocations)
+@router.get('/current-location', response_model=TransportLocations, response_model_exclude_none=True)
 def mb_current_location():
     return query_current_position()
