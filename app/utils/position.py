@@ -1,4 +1,5 @@
 import requests
+from fastapi import HTTPException
 from google.transit import gtfs_realtime_pb2
 from app.models import TransportLocation
 from app.models import TransportLocations
@@ -12,9 +13,12 @@ def query_current_position():
     pwd = settings.mb_password
     url = 'http://app.citi-mb.mx/GTFS-RT/vehiculosPosicion'
 
-    res = requests.get(url, auth=(usr, pwd))
+    try:
+        res = requests.get(url, auth=(usr, pwd))
+    except:
+        raise HTTPException(status_code=500, detail='Something went wrong, cannot fetch current position data')
     if res.status_code != 200:
-        raise ValueError('Something went wrong, cannot fetch current position data')
+        raise HTTPException(status_code=500, detail='Something went wrong, cannot fetch current position data')
 
     feed = gtfs_realtime_pb2.FeedMessage()
     feed.ParseFromString(res.content)
