@@ -7,7 +7,7 @@ COPY . /app
 
 RUN pip install pip --upgrade
 RUN pip install poetry
-RUN poetry install
+RUN poetry install --without dev
 # TODO: Use a non root user
 
 CMD poetry run uvicorn app.main:app --host 0.0.0.0
