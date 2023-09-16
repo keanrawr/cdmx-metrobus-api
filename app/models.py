@@ -20,17 +20,18 @@ class TransportLocation(Feature):
     properties: TransportProperties
 
 class TransportLocations(FeatureCollection):
+    type: str = "FeatureCollection"
     features: List[TransportLocation]
 
 
 class LineProperties(BaseModel):
-    id: str
-    line: str
+    id: int
+    line: int
     name: str
     short_name: str
     operating: str
     serv_side: str
-    bus_length: str
+    bus_length: int
     oper_days: str
 
 class MetrobusLine(Feature):
@@ -39,11 +40,12 @@ class MetrobusLine(Feature):
     properties: LineProperties
 
 class MetrobusLines(FeatureCollection):
+    type: str = "FeatureCollection"
     features: List[MetrobusLine]
 
 
 class StopProperties(BaseModel):
-    stop_id: str
+    stop_id: int
     stop_name: str
 
 class MetrobusStop(Feature):
@@ -52,4 +54,5 @@ class MetrobusStop(Feature):
     properties: StopProperties
 
 class MetrobusStops(FeatureCollection):
+    type: str = "FeatureCollection"
     features: List[MetrobusStop]
