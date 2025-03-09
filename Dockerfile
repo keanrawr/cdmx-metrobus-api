@@ -1,4 +1,4 @@
-FROM python:3.10-slim-bookworm
+FROM python:3.12-slim-bookworm
 
 EXPOSE 8000
 
@@ -10,4 +10,4 @@ RUN pip install poetry
 RUN poetry install --without dev
 # TODO: Use a non root user
 
-CMD poetry run uvicorn app.main:app --host 0.0.0.0
+CMD ["poetry", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0"]
