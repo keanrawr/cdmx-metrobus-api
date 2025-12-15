@@ -1,5 +1,7 @@
 # Metrobus Data API
 
+## ***NOTE:*** CDMX's Metrobus' API is no more, archiving this repo
+
 As always, I have way too many side projects, and this morning I felt that my previous attempt to process data from one of Mexico City's most important public transportation method deserved more love. [The Mexico City data page](https://datos.cdmx.gob.mx/) has gone through a fair share of changes over the last couple of years, in my lazyness not wanting to actively maintain a code base that uses an API that might introduce breaking changes from one day to the other, I decided to put this project in the freezer.
 
 For a while now it appears that changes have slowed down, and that the devs for the Mexico City data page have settled on a more long-term version of the page. And that was reason enough to decide and give this project another try.
